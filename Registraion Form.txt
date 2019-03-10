@@ -1,0 +1,37 @@
+Feature:
+In order to register on www.abconline.com
+As a user
+I want to register successfully using all compulsory fields
+
+
+Scenario 1:  When user clicks on registration page user should see registration form
+
+Given user is on the homepage of www.abconline.com
+
+And click on the register page
+
+Then user should see registration form
+
+
+Scenario 2: When user fills all compulsory fields user should be registered successfully
+
+Given user is on the homepage of www.abconline.com
+
+When she enters “Niki” as her First name
+
+And she enters “Patel” as her Last name
+
+And “nikipatel123@gmail.com” as her Email
+
+And “Niki123” as her Password
+
+And “Niki123” as her Confirm password
+
+And she clicks on “REGISTER” button
+
+Then user should be registered successfully
+
+And see message “Your registration completed”
+
+
+

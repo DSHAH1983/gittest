@@ -1,0 +1,142 @@
+Feature: Bmail Login tests
+
+
+Scenario 1: User should be logged in with valid credentials
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+When user enters Username “Tinashah”
+
+And enters Password “ABC123”
+
+And clicks sign in
+
+Then user should be logged in 
+
+And see welcome username “Tinashah”
+
+
+Scenario 2: User should not be logged in with valid username and invalid password
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+When user enters Username “Tinashah”
+
+And enters Password “DEF123”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+Scenario 3: User should not be logged in with valid username and blank password
+
+Given user opens Chrome browser 73.0 
+
+ And navigate to URL www.bmail.com
+
+When user enters Username “Tinashah”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+Scenario 4: User should not be logged in with blank credentials
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed 
+
+
+Scenario 5: User should not be able to log in with invalid username and invalid password
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+When user enters Username “Rimashah”
+
+And enters Password “DEF123”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+Scenario 6: User should not be able to log in with invalid username and valid password
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+When user enters Username “Rimashah”
+
+And enters Password “ABC123”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+Scenario 7: User should not be able to log in with invalid username and blank password
+
+Given user opens Chrome browser 73.0 
+
+When user enters Username “Rimashah”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+Scenario 8: User should not be able to log in with blank username and valid password
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+And enters Password “ABC123”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
+
+
+Scenario 9: User should not be able to log in with blank username and invalid password
+
+Given user opens Chrome browser 73.0 
+
+And navigate to URL www.bmail.com
+
+And enters Password “DEF123”
+
+And clicks sign in
+
+Then user should be not be logged in 
+
+And see error message displayed
+
